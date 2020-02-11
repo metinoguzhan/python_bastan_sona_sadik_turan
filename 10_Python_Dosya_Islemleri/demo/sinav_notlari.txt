@@ -1,0 +1,5 @@
+çınar turan:90,70,60
+sena turan:50,60,80
+ahmet yılmaz:40,50,50
+emre yaşar:50,85,75
+mustafa bey:85,75,65
