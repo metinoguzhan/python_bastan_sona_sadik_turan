@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body class="container my-4">
+
+    <a href="#" class="btn btn-primary" data-toggle="popover" data-content="some content" title="popover header">
+        Toggle Popover
+    </a>
+
+    <br><br><br><br>
+
+    <a href="#" class="btn btn-success" data-toggle="popover" data-content="some content" title="popover header"
+        data-placement="top">
+        Toggle Popover on Top
+    </a>
+
+    <a href="#" class="btn btn-warning" data-toggle="popover" data-content="some content" title="popover header"
+        data-placement="bottom">
+        Toggle Popover on Bottom
+    </a>
+
+    <a href="#" class="btn btn-danger" data-toggle="popover" data-content="some content" title="popover header"
+        data-placement="left">
+        Toggle Popover on Left
+    </a>
+
+    <a href="#" class="btn btn-info" data-toggle="popover" data-content="some content" title="popover header"
+        data-placement="right">
+        Toggle Popover on Right
+    </a>
+    <br><br>
+
+    <a href="#" class="btn btn-primary" data-toggle="popover" data-content="some content" title="popover header"
+        data-trigger="focus">
+        Toggle Popover
+    </a>
+    <br><br>
+
+    <a id="btnPopover" href="#" class="btn btn-primary" data-toggle="popover" data-content="some content" title="popover header"
+        data-trigger="hover">
+        Toggle Popover
+    </a>
+    <br><br>
+    <button type="button" class="btn btn-success" onclick="showPopover()">
+        show
+    </button>
+    <button type="button" class="btn btn-success" onclick="hidePopover()">
+        hide
+    </button>
+    <button type="button" class="btn btn-success" onclick="togglePopover()">
+        toggle
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle = "popover"]').popover()
+        })
+
+        function showPopover(){
+            $('#btnPopover').popover('show');
+        }
+
+        function hidePopover(){
+            $('#btnPopover').popover('hide');
+        }
+
+        function togglePopover(){
+            $('#btnPopover').popover('toggle');
+        }
+
+
+        $('#btnPopover').on('show.bs.popover',function(){
+            console.log("show")
+        })
+
+        
+        $('#btnPopover').on('shown.bs.popover',function(){
+            console.log("shown")
+        })
+
+        
+        $('#btnPopover').on('hide.bs.popover',function(){
+            console.log("hide")
+        })
+
+        
+        $('#btnPopover').on('hidden.bs.popover',function(){
+            console.log("hidden")
+        })
+
+    </script>
+</body>
+
+</html>
